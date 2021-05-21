@@ -1,0 +1,7 @@
+/data/*
+/carla_images/*
+*.zip
+
+/code/__pycache__/*
+/logs/*
+/weights/*
