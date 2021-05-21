@@ -281,16 +281,16 @@ for tindex, thres in enumerate(thresults):
 # Threshold results
 xlabels = folders
 plt.figure(figsize=(10,8))
-plt.plot(xlabels, pxas_to_plot[0], label="pxa_15m", color = "#b3d9ff")
+plt.plot(xlabels, pxas_to_plot[0], label="pxa_15m", color = "#004080")
 plt.plot(xlabels, pxas_to_plot[1], label="pxa_25m", color = "#1a8cff")
-plt.plot(xlabels, pxas_to_plot[2], label="pxa_35m", color = "#004080")
+plt.plot(xlabels, pxas_to_plot[2], label="pxa_35m", color = "#b3d9ff")
 
-plt.plot(xlabels, ious_to_plot[0], label="IoU_15m", color = "#ffd1b3")
+plt.plot(xlabels, ious_to_plot[0], label="IoU_15m", color = "#803300")
 plt.plot(xlabels, ious_to_plot[1], label="IoU_25m", color = "#ff751a")
-plt.plot(xlabels, ious_to_plot[2], label="IoU_35m", color = "#803300")
+plt.plot(xlabels, ious_to_plot[2], label="IoU_35m", color = "#ffd1b3")
 plt.xticks(fontsize=16)
 plt.yticks(fontsize=16)
-plt.legend()
+plt.legend(fontsize=14)
 
 
 

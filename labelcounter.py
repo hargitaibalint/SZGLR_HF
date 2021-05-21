@@ -101,3 +101,23 @@ for foldername in folders:
         for col in simg:
             for labl in col:
                 labelcounts[labellist.index(labl.tolist())] += 1
+
+#%% - Plot counts
+sortedlabelcounts = np.sort(labelcounts)[::-1]
+sortedlabellist = []
+for lcount in sortedlabelcounts:
+    idx, = np.where(labelcounts == lcount)
+    sortedlabellist.append(labels_hu[idx[0]])
+    
+fig = plt.figure(figsize=(12,6))
+ax = fig.add_axes([0,0,1,1])
+ax.grid(zorder=0)
+rects = ax.bar(sortedlabellist,sortedlabelcounts)
+# ax.bar_label(sortedlabelcounts, padding=3)
+ax.tick_params(labelsize=16)
+ax.set_xticklabels(sortedlabellist, fontsize=18, rotation=90)
+ax.set_title('A különböző kategóriák előfordulási gyakorisága', fontsize=20)
+
+
+
+plt.show()
